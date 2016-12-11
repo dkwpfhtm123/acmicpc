@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Fake.Acmicpc.P1546</StartupObject>
+    <StartupObject>Fake.Acmicpc.Level5.P8958</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

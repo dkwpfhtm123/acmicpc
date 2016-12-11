@@ -15,25 +15,27 @@ namespace Fake.Acmicpc.Level5
             var count = int.Parse(Console.ReadLine());
 
             string result = null;
+            //string builder 사용
 
             for (int i = 0; i < count; i++)
             {
                 var input = Console.ReadLine();
-                var plus = 0;
+                var points = 0;
                 var total = 0;
 
-                for (int y = 0; y < input.Length; y++)
+                for (int k = 0; k < input.Length; k++)
                 {
-                    if (input[y] == 'O')
-                        plus++;
+                    if (input[k] == 'O')
+                    {
+                        points++;
+                        total += points;
+                    }
                     else
-                        plus = 0;
-
-                    total += plus;
+                        points = 0;
                 }
 
                 result += total.ToString();
-                result += "\r\n";
+                result += "\n";
             }
 
             Console.WriteLine(result);

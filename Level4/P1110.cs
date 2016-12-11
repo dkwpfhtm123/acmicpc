@@ -11,7 +11,7 @@ namespace Fake.Acmicpc.Level4
         {
             var input = int.Parse(Console.ReadLine());
 
-            var result = 0;
+            var result = -1; // 함수로 모듈화 for문보다 dowhile
             var ten = input / 10;
             var one = input % 10;
 

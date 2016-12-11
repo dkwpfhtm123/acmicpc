@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Fake.Acmicpc.Level4
 {
@@ -11,29 +12,36 @@ namespace Fake.Acmicpc.Level4
         {
             var count = int.Parse(Console.ReadLine());
 
-            string outcome = null;
+            var output = new StringBuilder();
 
             for (int i = 0; i < count; i++)
             {
-                var input = Console.ReadLine().Split(' ');
-                var total = 0.0;
-                var averageAboveStudents = 0.0;
+                var inputStrings = Console.ReadLine().Split(' ');
+                var input = new int[inputStrings.Length];
 
-                int students = int.Parse(input[0]);
+                for (var k = 0; k < inputStrings.Length; k++)
+                    input[k] = int.Parse(inputStrings[k]);
+
+                var total = 0;
+                var students = input[0];
 
                 for (int z = 1; z <= students; z++)
-                    total += int.Parse(input[z]);
+                    total += input[z];
 
                 var average = total / students;
+                var averageAboveStudents = 0;
 
                 for (int z = 1; z <= students; z++)
-                    if (int.Parse(input[z]) > average)
+                {
+                    if (input[z] > average)
                         averageAboveStudents++;
+                }
 
-                outcome += string.Format("{0:F3}", ((averageAboveStudents / students) * 100));
+                output.AppendFormat("{0:F3}%", (((double)averageAboveStudents / students) * 100.0));
+                output.AppendLine();
             }
 
-            Console.WriteLine(outcome);
+            Console.WriteLine(output.ToString());
         }
     }
 }
