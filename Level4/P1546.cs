@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Fake.Acmicpc
+namespace Fake.Acmicpc.Level4
 {
     /// <summary>
-    /// PASS https://www.acmicpc.net/problem/1546
+    /// SUCCESS https://www.acmicpc.net/problem/1546
     /// </summary>
     static class P1546
     {

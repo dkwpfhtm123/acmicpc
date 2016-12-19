@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Fake.Acmicpc
+namespace Fake.Acmicpc.Level1
 {
     /// <summary>
     /// PASS https://www.acmicpc.net/problem/2557
